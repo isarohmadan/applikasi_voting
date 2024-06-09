@@ -1,0 +1,9 @@
+# Mencegah akses langsung ke folder admin
+Options -Indexes
+
+# Mengarahkan permintaan langsung ke folder admin ke halaman error atau halaman login
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/views/admin/ [NC]
+RewriteRule ^(.*)$ /error.php [L]
