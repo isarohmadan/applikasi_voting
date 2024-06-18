@@ -1,7 +1,7 @@
 <?php
 require_once('./app/Logic.php');
 if(!isset($_GET['id'])){
-    header("location:admin.php?page=pooling");
+    header("location:user.php?page=pooling");
 }
 
 $logic = new Logic();
@@ -12,10 +12,10 @@ $pooling = $logic->getPemilihWherePooling($_GET["id"]);
 
 <!DOCTYPE html>
 <html lang="en">
-    <!-- ngambilnya dari admin -->
-    <?php include_once('./views/admin/components/header.php');?>
+    <!-- ngambilnya dari user -->
+    <?php include_once('./views/user/components/header.php');?>
 <body>
-    <?php include_once('./views/admin/components/navbar.php');?>
+    <?php include_once('./views/user/components/navbar.php');?>
     <!-- Container -->
 <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
   <!-- Header -->

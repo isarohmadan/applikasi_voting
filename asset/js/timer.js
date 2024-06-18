@@ -3,12 +3,20 @@ function updateCountdown() {
     
     deadlines.forEach((deadlineElement) => {
         const deadline = new Date(deadlineElement.getAttribute('data-deadline'));
-        console.log(deadline);
         const now = new Date().getTime();
         const distance = deadline - now;
 
         if (distance < 0) {
             deadlineElement.innerHTML = "EXPIRED";
+            // fetch('admin.php?expired=true', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //         id: deadlineElement.getAttribute('data-id'),
+            //     }),
+            // })
             return;
         }
 

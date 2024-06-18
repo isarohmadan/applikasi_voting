@@ -9,7 +9,7 @@ final class Conn {
         $this->dbHost = 'localhost';
         $this->dbUsername = 'root';
         $this->dbPassword = '';
-        $this->dbName = 'Kalkulator';
+        $this->dbName = 'voting';
     }
 
     public function getConnection() {

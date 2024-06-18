@@ -34,7 +34,7 @@ if(isset($_SESSION['id'])){
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-        <fieldset class="flex justify-center border-2 w-96 mx-auto mt-10 p-5">
+        <fieldset class="flex justify-center border-2 w-96 mx-auto mt-10 p-5 bg-blue-200">
             <legend class="text-center font-bold uppercase">Login</legend>
             <form class="w-full max-w-xs" action="" method="post">
                 <div class="mb-4">

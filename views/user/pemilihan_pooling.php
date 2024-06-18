@@ -10,7 +10,7 @@ if(isset($_POST['submit-pemilih'])){
 
     $result = $config->memilihPooling($id_pool, $comment);
     if($result[0] == 200){
-        header('Location: ./admin.php?page=pemilihan_pooling');
+        header('Location: ./user.php?page=pemilihan_pooling');
     }else{
         echo "<script>alert('{$result[1]}');</script>";
     }
@@ -20,10 +20,10 @@ if(isset($_POST['submit-pemilih'])){
 
 <!DOCTYPE html>
 <html lang="en">
-    <!-- ngambilnya dari admin -->
-    <?php include_once('./views/admin/components/header.php');?>
+    <!-- ngambilnya dari user -->
+    <?php include_once('./views/user/components/header.php');?>
 <body>
-    <?php include_once('./views/admin/components/navbar.php');?>
+    <?php include_once('./views/user/components/navbar.php');?>
     <!-- Container -->
 <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
   <!-- Header -->

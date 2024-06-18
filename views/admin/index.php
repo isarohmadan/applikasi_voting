@@ -9,17 +9,22 @@
   }
 
   $logic = new Logic();
-  // $data = $logic->getRiwayatKalkulator();
-  $log_kalkulator = 0;
+  $data = $logic->getAllCategory();
+  $kategori = 0;
   foreach($data as $us){
-    $log_kalkulator++;
+    $kategori++;
   }
 
 
-  // $data = $logic->getRiwayatBerat();
-  $log_berat = 0;
+  $data = $logic->getPooling();
+  $pooling = 0;
   foreach($data as $us){
-    $log_berat++;
+    $pooling++;
+  }
+  $pemilih = $logic->getPooling();
+  $user_pemilih= 0;
+  foreach($data as $us){
+    $user_pemilih++;
   }
 
 ?>
@@ -30,43 +35,34 @@
     <?php include_once('./views/admin/components/header.php');?>
 <body>
     <?php include_once('./views/admin/components/navbar.php');?>
-    <div class="container mx-auto p-6">
-  <h1 class="text-2xl font-bold mb-6">Dashboard</h1>
-  <div class="grid grid-cols-2 gap-6">
-    <div class="bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-xl font-bold mb-2">Total Riwayat Kalkulator</h2>
-      <p class="text-gray-600 mb-4">Total Riwayat:</p>
-      <p class="text-3xl font-bold"><?=$log_kalkulator?></p>
-      <div class="flex items-center mt-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14h-5l-1.405-1.405A2.032 2.032 0 0114 12H5a2.032 2.032 0 01-2-2V5a2.032 2.032 0 012-2h14a2.032 2.032 0 012 2v7a2.032 2.032 0 01-2 2h-5l-1.405 1.405a2.032 2.032 0 01-2.828 0l-1.405-1.405H5a2.032 2.032 0 01-2 2v7z" />
-        </svg>
-        <a class="text-gray-600 ml-2 text-decoration-none" href="admin.php?page=riwayat_kalkulator">View Riwayat Kalkulator</a>
+    <div class="container mx-auto p-6 flex justify-center flex-col">
+    <h1 class="text-2xl text-center font-bold mb-6 uppercase">Dashboard</h1>
+    <div class="grid grid-cols-4 gap-6">
+      <div class="bg-white shadow-md rounded-lg p-6 flex-1 justify-center">
+        <h2 class="text-xl font-bold mb-2">Jumlah Kategori</h2>
+        <p class="text-gray-600 mb-4">Jumlah Kategori:</p>
+        <p class="text-3xl font-bold"><?=$kategori?></p>
+        <div class="flex items-center mt-4">
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-2">Total Pooling</h2>
+        <p class="text-gray-600 mb-4">Total Pooling:</p>
+        <p class="text-3xl font-bold"><?=$pooling?></p>
+        <div class="flex items-center mt-4">
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-2">Total Users</h2>
+        <p class="text-gray-600 mb-4">Total users:</p>
+        <p class="text-3xl font-bold"><?=$user?></p>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-2">Total Pemilih</h2>
+        <p class="text-gray-600 mb-4">Total Pemilih:</p>
+        <p class="text-3xl font-bold"><?=$user_pemilih?></p>
       </div>
     </div>
-    <div class="bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-xl font-bold mb-2">Total Riwayat Kalkulator Konversi Berat</h2>
-      <p class="text-gray-600 mb-4">Total Riwayat:</p>
-      <p class="text-3xl font-bold"><?=$log_berat?></p>
-      <div class="flex items-center mt-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14h-5l-1.405-1.405A2.032 2.032 0 0114 12H5a2.032 2.032 0 01-2-2V5a2.032 2.032 0 012-2h14a2.032 2.032 0 012 2v7a2.032 2.032 0 01-2 2h-5l-1.405 1.405a2.032 2.032 0 01-2.828 0l-1.405-1.405H5a2.032 2.032 0 01-2 2v7z" />
-        </svg>
-        <a class="text-gray-600 ml-2 text-decoration-none" href="admin.php?page=riwayat_berat">View Riwayat Konversi berat</a>
-      </div>
-    </div>
-    <div class="bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-xl font-bold mb-2">Total Users</h2>
-      <p class="text-gray-600 mb-4">Total users:</p>
-      <p class="text-3xl font-bold"><?=$user?></p>
-      <div class="flex items-center mt-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-        <a class="text-gray-600 ml-2 text-decoration-none" href="admin.php?page=users">View users</a>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>

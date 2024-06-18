@@ -9,12 +9,9 @@ $users = $config->getPooling();
 <!DOCTYPE html>
 <html lang="en">
     
-<?php include_once('./views/admin/components/header.php');?>
+<?php include_once('./views/user/components/header.php');?>
 <body>
-<?php include_once('./views/admin/components/navbar.php');?>
-<div class="container mx-auto mt-5">
-    <a href="?page=create_pooling" class="bg-red-400 hover:bg-red-200 transition-all text-white font-bold container p-2 rounded-xl px-5">Membuat Voting</a>
-</div>
+    <?php include_once('./views/user/components/navbar.php');?>
 <main class="container mx-auto mt-5">
     <table class="w-full divide-y divide-gray-200">
         <thead class="bg-gray-50 text">
@@ -54,13 +51,7 @@ $users = $config->getPooling();
                     <div class="text-sm text-gray-900"><?= $user['nama_kategori'] ?></div>
                 </td>
                     <td class="px-6 text-center py-4 whitespace-nowrap text-center text-sm font-medium">
-                        <a href="admin.php?page=update_pooling&id=<?=$user['id_pooling']?>" class="text-yellow-600 text-center hover:text-indigo-900 m-2" aria-label="Edit">
-                            <i class="fas fa-edit fa-lg"></i>
-                        </a>
-                        <a href="admin.php?page=delete_pooling&id=<?=$user['id_pooling']?>" class="text-red-600 text-center hover:text-red-900 m-2" aria-label="Delete">
-                            <i class="fas fa-trash fa-lg"></i>
-                        </a>
-                        <a href="admin.php?page=view_pooling&id=<?=$user['id_pooling']?>" class="text-blue-600 text-center hover:text-red-900 m-2" aria-label="Delete">
+                        <a href="user.php?page=view_pooling&id=<?=$user['id_pooling']?>" class="text-blue-600 text-center hover:text-red-900 m-2" aria-label="Delete">
                             <i class="fas fa-eye fa-lg"></i>
                         </a>
                     </td>

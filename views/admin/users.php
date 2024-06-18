@@ -15,7 +15,7 @@ $users = $config->getAllUsers();
 <body>
 <?php include_once('./views/admin/components/navbar.php');?>
 <div class="container mx-auto mt-5">
-    <a href="?page=create" class="bg-blue-500 hover:bg-blue-700 text-white font-bold container p-2 rounded-xl px-5">Create User</a>
+    <a href="?page=create" class="bg-blue-500 hover:bg-blue-700 text-white font-bold container p-2 rounded-xl px-5">Membuat User</a>
 </div>
 <main class="container mx-auto mt-5">
     <table class="w-full divide-y divide-gray-200">

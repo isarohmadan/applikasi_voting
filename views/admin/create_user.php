@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 <body>
     <?php include_once('./views/admin/components/navbar.php');?>
     <main class="container mx-auto mt-5">
-    <h1 class="text-2xl font-bold mb-4">Create User</h1>
+    <h1 class="text-2xl font-bold mb-4">Membuat User</h1>
     <?php if (isset($error)): ?>
         <p class="text-red-500 mb-4"><?= htmlspecialchars($error) ?></p>
     <?php endif; ?>

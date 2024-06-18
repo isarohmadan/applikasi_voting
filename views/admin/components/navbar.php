@@ -3,14 +3,15 @@
     <div class="flex justify-between">
       <div class="flex space-x-7">
         <a href="admin.php?page=dashboard" class="flex items-center py-4 px-2">
-          <span class="font-semibold text-gray-500 text-lg">Admin Page Kalkulator</span>
+          <span class="font-semibold text-gray-500 text-lg">Voting Admin</span>
         </a>
       </div>
       <div class="hidden md:flex items-center space-x-1">
         <a href="admin.php?page=dashboard" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Dashboard</a>
         <a href="admin.php?page=users" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Pengguna</a>
-        <a href="admin.php?page=pooling" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Pooling</a>
-        <a href="admin.php?page=pemilihan_pooling" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Pooling</a>
+        <a href="admin.php?page=kategori" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Kategori</a>
+        <a href="admin.php?page=pooling" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Voting</a>
+        <a href="admin.php?page=pemilihan_pooling" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Pemilihan</a>
         <a href="admin.php?page=logout" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Logout</a>
       </div>
       <div class="md:hidden flex items-center">

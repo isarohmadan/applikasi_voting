@@ -12,7 +12,6 @@
         die;
     }
 
-
     $_GET['page'] = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
     switch ($_GET['page']) {
         case 'dashboard':
@@ -39,6 +38,18 @@
         case 'pemilihan_pooling':
             include('./views/admin/pemilihan_pooling.php');
             break;
+        case 'kategori':
+            include('./views/admin/category.php');
+            break;
+        case 'create_category':
+            include('./views/admin/create_category.php');
+            break;
+        case 'edit_category':
+            include('./views/admin/update_category.php');
+            break;
+        case 'delete_category':
+            include('./views/admin/delete_category.php');
+            break;
         case 'create':
             include('./views/admin/create_user.php');
         break;
@@ -55,4 +66,5 @@
             include('./views/admin/index.php');
     }
 
+    
 ?>

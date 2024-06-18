@@ -17,17 +17,14 @@
         case 'dashboard':
             include('./views/user/index.php');
             break;
-        case 'kalkulator':
-            include('./views/user/kalkulator.php');
+        case 'pooling':
+            include('./views/user/pooling.php');
             break;
-        case 'riwayat_kalkulator':
-            include('./views/user/riwayat_kalkulator.php');
-            break;
-        case 'riwayat_berat':
-            include('./views/user/riwayat_berat.php');
-            break;
-        case 'berat':
-            include('./views/user/berat.php');
+        case 'view_pooling':
+            include('./views/user/view_pooling.php');
+        break;
+        case 'pemilihan_pooling':
+            include('./views/admin/pemilihan_pooling.php');
             break;
         case 'logout':
             include('./views/user/logout.php');
